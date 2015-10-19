@@ -7,7 +7,7 @@ Ian Hussey (ian.hussey@ugent.be)
 #Version number
 0.8
 
-***NB this code has not been independently checks to make sure that it functions as intended.
+***NB this code has not been independently checked to make sure that it functions as intended.
 
 #Notes
 - To my knowledge, this implementation has good fidelity to Millisecond's Inquisit script. However, all instructions are hard coded, making it slightly more difficult to customize the domain or language.
