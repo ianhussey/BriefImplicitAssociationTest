@@ -27,7 +27,7 @@ The current version follows the block layout described in Nosek et al. (2015: th
 - Block 2 (categories + attributes) 16 Trials (1 loop of 16)
 - Block 3 (reversed categories) 4 Trials (1 loop of 4)
 - Block 4 (reversed categories + attributes) 16 Trials (1 loop of 16)
-- (x2 loops of the above four blocks)
+  - (x2 loops of the above four blocks)
 
 # Known issues
 1. If participants get 100% of trials correct on either blocks 3&4 or 6&7 then one of two incorrect response RT columns will not be created for that participant. However, this is not a problem if you merge files across participants based on column header matching (e.g., using plyr’s rbind.fill command). However, it can be problematic if your data processing workflow relies on column ORDER rather than column header NAME, e.g., a SPSS script using a GET command.
