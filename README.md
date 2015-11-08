@@ -30,7 +30,7 @@ The current version follows the block layout described in Nosek et al. (2015: th
   - (x2 loops of the above four blocks)
 
 # Known issues
-1. If participants get 100% of trials correct on either blocks 3&4 or 6&7 then one of two incorrect response RT columns will not be created for that participant. However, this is not a problem if you merge files across participants based on column header matching (e.g., using plyr’s `rbind()` command). However, it can be problematic if your data processing workflow relies on column ORDER rather than column header NAME, e.g., a SPSS script using a GET command.
+1. If participants get 100% of trials correct on either blocks 3&4 or 6&7 then one of two incorrect response RT columns will not be created for that participant. However, this is not a problem if you merge files across participants based on column header matching (e.g., using dplyr’s `rbind_list()` command). However, it can be problematic if your data processing workflow relies on column ORDER rather than column header NAME, e.g., a SPSS script using a GET command.
 
 2. Instruction screens are hard coded rather than pulled from the excel files, making changing the domain or translating the task slightly more work. Future changes could change this.
 
