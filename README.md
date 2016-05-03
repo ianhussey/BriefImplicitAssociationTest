@@ -1,15 +1,18 @@
-# Created by
-Ian Hussey (ian.hussey@ugent.be)
+# Brief Implicit Association Test (BIAT) written in PsychoPy
 
-# Last change
-19/10/2015
+## License
+Copyright (c) Ian Hussey 2016 (ian.hussey@ugent.be)
 
-# Version number
-0.8
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+## Version number
+0.8 (19/10/2015)
 
 ### NB this code has not been independently checked to make sure that it functions as intended.
 
-# Notes
+## Notes
 - To my knowledge, this implementation has good fidelity to Millisecond's Inquisit script. However, all instructions are hard coded, making it slightly more difficult to customize the domain or language.
 - The current version does not allow you to alter the order of block presentation within the task (e.g., whether participants get flowers good or insects good first). If you want a version with the alternative block order, you can create a second copy of the task folder and use the alternative stimulus file. Future versions might make this possible with a preparatory loop, but it’s more effort than it’s worth right now.
 - The escape key quits the task at any time. E, I, or the return key ends the task properly once it’s complete.
@@ -18,7 +21,7 @@ Ian Hussey (ian.hussey@ugent.be)
 - Block length is a function of the number of rows in the stimuli.xlsx file. In order to retain the desired block lengths (e.g., 20 in the first block), 5 exemplars are needed per trial-type. If you wish to use more exemplars per trial-type this will need code changes; probably an overhaul of how each stimulus pool is sampled.
 - ITI is set to 250 ms (see Nosek et al., 2007: the IAT at age 7).
 
-# Block layout
+## Block layout
 The current version follows the block layout described in Nosek et al. (2015: the Brief Implicit Association Test).
 
 4 exemplars per stimulus class. Changing this would require us to add trial counters and “loop.finished = true” code snippets in order to preserve block lengths.
@@ -29,7 +32,7 @@ The current version follows the block layout described in Nosek et al. (2015: th
 - Block 4 (reversed categories + attributes) 16 Trials (1 loop of 16)
   - (x2 loops of the above four blocks)
 
-# Known issues
+## Known issues
 1. If participants get 100% of trials correct on either blocks 3&4 or 6&7 then one of two incorrect response RT columns will not be created for that participant. However, this is not a problem if you merge files across participants based on column header matching (e.g., using dplyr’s `rbind_list()` command). However, it can be problematic if your data processing workflow relies on column ORDER rather than column header NAME, e.g., a SPSS script using a GET command.
 
 2. Instruction screens are hard coded rather than pulled from the excel files, making changing the domain or translating the task slightly more work. Future changes could change this.
