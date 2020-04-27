@@ -1,5 +1,7 @@
 # Brief Implicit Association Test (BIAT) written in PsychoPy
 
+PLEASE NOTE THAT I NO LONGER MAINTAIN THIS CODE. AS PSYCHOPY HAS BEEN UPDATED OVER TIME, IT MAY HAVE BROKEN FEATURES. FEEL FREE TO FORK, FIX AND MAINTAIN THIS CODE IF YOU WISH.
+
 ## License
 Copyright (c) Ian Hussey 2016 (ian.hussey@ugent.be)
 
